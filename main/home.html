@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,99 @@
     <link rel="stylesheet" href="../css/home.css">
 
 </head>
+
 <body>
 
     <header>
         <nav class="navbar">
-            <ul>
+            <div class="logo">
+                <img src="../assents/logo.jpg" alt="logo do site">
+
+            </div>
+            <ul class="abas">
+                <li id="home"><a href="home.html">Home</a></li>
+                <li id="sobre"><a href="sobre.html">Sobre</a></li>
+                <li id="serviços"><a href="servicos.html">Serviços</a></li>
+                <li id="blog"><a href="blog.html">Blog</a></li>
+                <li id="contato"><a href="contato.html">Contato</a></li>
+                <li id="produtos"><a href="produtos.html">Produtos</a></li>
                 
-
-
             </ul>
         </nav>
     </header>
-    
-    
+
+    <main>
+
+        <button class="menuBotao" onclick="toggleSidebar()">☰ Menu</button>
+
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Minha Conta</a></li>
+                <li><a href="#">Meus Jogos</a></li>
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </aside>
+
+
+        <section class="principal">
+            <div class="container">
+                <div class="cartaz">
+                    <img src="../assents/cartazNaoDefinido.avif" alt="capaJogo" class="capa">
+                    <h2>Nome Jogo1</h2>
+                    <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse ex.
+                        Accusantium id veritatis doloremque, a labore eaque nostrum eligendi sequi harum cum inventore
+                        cupiditate adipisci aspernatur consequatur laudantium beatae.</p>
+                    <button class="download">download</button>
+                </div>
+
+                <div class="cartaz">
+                    <img src="../assents/cartazNaoDefinido.avif" alt="capaJogo" class="capa">
+                    <h2>nome Jogo2</h2>
+                    <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fuga nulla aut
+                        illum. Labore tempora perspiciatis doloremque sapiente aliquam possimus ipsam cum dignissimos,
+                        quas
+                        quo, vel sed, consequuntur fuga minus!</p>
+                    <button class="download">download</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+        <div>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Politica de Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">X</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p>Contato: contato@empresa.com</p>
+            <p>Telefone: +55 11 12354678</p>
+        </div>
+
+        <div class="direitos">
+            <p>&copy; 2025 direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="../script/home.js"></script>
 </body>
+
 </html>
