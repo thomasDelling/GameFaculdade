@@ -13,44 +13,30 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="../assents/logo.jpg" alt="logo do site">
+            <div>
 
+                <img class="logo">
+
+                <ul class="abas">
+                    <li id="home"><a href="home.html">Home</a></li>
+                    <li id="sobre"><a href="sobre.html">Sobre</a></li>
+                    <li id="serviços"><a href="servicos.html">Serviços</a></li>
+                    <li id="blog"><a href="blog.html">Blog</a></li>
+                    <li id="contato"><a href="contato.html">Contato</a></li>
+                    <li id="produtos"><a href="produtos.html">Produtos</a></li>
+
+                </ul>
             </div>
-            <ul class="abas">
-                <li id="home"><a href="home.html">Home</a></li>
-                <li id="sobre"><a href="sobre.html">Sobre</a></li>
-                <li id="serviços"><a href="servicos.html">Serviços</a></li>
-                <li id="blog"><a href="blog.html">Blog</a></li>
-                <li id="contato"><a href="contato.html">Contato</a></li>
-                <li id="produtos"><a href="produtos.html">Produtos</a></li>
-                
-            </ul>
+
         </nav>
     </header>
 
     <main>
 
-        <button class="menuBotao" onclick="toggleSidebar()">☰ Menu</button>
-
-        <aside class="sidebar">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Minha Conta</a></li>
-                <li><a href="#">Meus Jogos</a></li>
-                <li><a href="#">Download</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Configurações</a></li>
-                <li><a href="#">Sair</a></li>
-            </ul>
-        </aside>
-
-
         <section class="principal">
             <div class="container">
                 <div class="cartaz">
-                    <img src="../assents/cartazNaoDefinido.avif" alt="capaJogo" class="capa">
+
                     <h2>Nome Jogo1</h2>
                     <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, esse ex.
                         Accusantium id veritatis doloremque, a labore eaque nostrum eligendi sequi harum cum inventore
@@ -59,7 +45,6 @@
                 </div>
 
                 <div class="cartaz">
-                    <img src="../assents/cartazNaoDefinido.avif" alt="capaJogo" class="capa">
                     <h2>nome Jogo2</h2>
                     <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam fuga nulla aut
                         illum. Labore tempora perspiciatis doloremque sapiente aliquam possimus ipsam cum dignissimos,
@@ -76,29 +61,30 @@
         <div>
             <ul>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Politica de Privacidade</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
                 <li><a href="#">Termos de Uso</a></li>
                 <li><a href="#">FAQ</a></li>
             </ul>
         </div>
-
+    
         <div class="social">
             <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">X</a></li>
+                <li><a href="https://www.facebook.com/?locale=pt_BR" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://x.com/?lang=pt" aria-label="X" target="_blank" rel="noopener noreferrer">X</a></li>
             </ul>
         </div>
-
+    
         <div>
-            <p>Contato: contato@empresa.com</p>
-            <p>Telefone: +55 11 12354678</p>
+            <p>Contato: <a href="mailto:contato@empresa.com">contato@empresa.com</a></p>
+            <p>Telefone: <a href="tel:+551112354678">+55 11 12354678</a></p>
         </div>
-
+    
         <div class="direitos">
-            <p>&copy; 2025 direitos reservados</p>
+            <p>&copy; 2025 Direitos Reservados</p>
         </div>
     </footer>
+    
 
     <script src="../script/home.js"></script>
 </body>

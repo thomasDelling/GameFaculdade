@@ -2,211 +2,134 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+.body {
+    overflow: hidden;
 }
+
+
+/*-----------------------------------------CABEÇALHO-------------------------------------------------------------------*/
+
 
 .navbar {
+    /* Barra de navegação no topo da tela */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1a1a1a;
-    padding: 15px 30px;
-}
-
-.logo img {
-    width: 70px;
-    border-radius: 70px;
+    padding: 15px;
+    background-color: rgb(128, 14, 14);
 }
 
 .abas {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    /* Lista de abas (links) dentro da navbar */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.abas li a {
-    color: white;
+.abas li {
+    /* Cada item da lista de abas */
+    display: inline;
+    margin-left: 20px;
+}
+
+.abas a {
+    /* Cada link dentro dos itens da lista */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #333;
+    font-size: 16px;
 }
 
-.abas li a:hover {
-    color: #116b28;
-}
-
-main {
-    display: flex;
-}
-
-.sidebar {
-    width: 150px;
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    overflow-x: hidden;
+.abas a:hover {
+    /* Efeito quando o mouse passa sobre o link */
+    color: #1e802b;
 }
 
 
 
-.sidebar.active {
-    transform: translateX(0);
-}
-
-.sidebar h2 {
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar ul li {
-    margin: 15px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.sidebar ul li a:hover {
-    color: #116b28;
-}
-
-.principal {
-    flex: 1;
-    padding: 20px;
-}
-
-.menuBotao {
-    background-color: #222;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 15px;
-}
-
-.principal {
-    background-color: #116b28;
-    color: white;
-    text-shadow: none;
-    padding: 20px;
-}
+/*-----------------------------------------MAIN------------------------------------------------------------------------*/
 
 .container {
+    /*local dos cartazes*/
     display: flex;
-    justify-content: space-between;
     gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .cartaz {
-    width: 45%;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.cartaz img {
-    width: 100%;
-    height: auto;
+    /*os cartazer */
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cartaz h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
 
-.cartaz .descricao {
-    font-size: 14px;
-    margin-bottom: 15px;
-    text-align: center;
-}
 
-.cartaz .download {
-    padding: 10px 20px;
-    background-color: #116b28;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.cartaz .download:hover {
-    background-color: #0a4a1a;
-}
+/*-----------------------------------------RODAPÉ----------------------------------------------------------------------*/
 
-.rodape {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 30px 0;
-    font-size: 14px;
-    text-align: center;
-}
 
-.footer-container {
+
+
+/* Garante que a altura da página ocupe 100% da tela */
+html, body {
+    height: 100%; /* Isso vai garantir que a altura do body seja sempre 100% da tela */
+    margin: 0;    /* Remove a margem padrão do navegador */
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap
+    flex-direction: column; /* Organiza o conteúdo da página em uma coluna */
 }
 
-.rodape>div {
-    margin: 10px;
-    flex: 1;
-    min-width: 200px;
+/* O conteúdo principal vai ocupar o espaço restante */
+main {
+    flex: 1; /* Esse comando vai "empurrar" o rodapé para baixo, ocupando o restante do espaço */
 }
 
-.rodape ul {
-    list-style: none;
-    padding: 0;
+/* Estilos do rodapé */
+.rodape {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    bottom: 0;
 }
 
-.rodape li {
-    margin: 5px 0;
-}
-
+/* Estilos para os links no rodapé */
 .rodape a {
-    text-decoration: none;        
-    color: white;                 
-    transition: color 0.3s;       
+    color: #fff; /* Cor branca para os links */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
 }
 
+/* Alterando a cor do link quando o cursor passa por cima */
 .rodape a:hover {
-    color: #116b28;               
+    color: #1e802b; /* Cor de destaque quando o mouse passa por cima */
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.rodape p {
-    margin: 5px 0;
+    .rodape div {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .direitos {
+        margin-top: 30px;
+    }
 }
-
-
-.direitos {
-    margin-top: 20px;
-    font-size: 12px;               
-    color: #aaa;       
- }         
