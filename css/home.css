@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.body {
+    overflow: hidden;
+}
+
+
+/*-----------------------------------------CABEÇALHO-------------------------------------------------------------------*/
+
+
+.navbar {
+    /* Barra de navegação no topo da tela */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(128, 14, 14);
+}
+
+.abas {
+    /* Lista de abas (links) dentro da navbar */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.abas li {
+    /* Cada item da lista de abas */
+    display: inline;
+    margin-left: 20px;
+}
+
+.abas a {
+    /* Cada link dentro dos itens da lista */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.abas a:hover {
+    /* Efeito quando o mouse passa sobre o link */
+    color: #1e802b;
+}
+
+
+
+/*-----------------------------------------MAIN------------------------------------------------------------------------*/
+
+.container {
+    /*local dos cartazes*/
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.cartaz {
+    /*os cartazer */
+    width: 300px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/*-----------------------------------------RODAPÉ----------------------------------------------------------------------*/
+
+
+
+
+/* Garante que a altura da página ocupe 100% da tela */
+html, body {
+    height: 100%; /* Isso vai garantir que a altura do body seja sempre 100% da tela */
+    margin: 0;    /* Remove a margem padrão do navegador */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo da página em uma coluna */
+}
+
+/* O conteúdo principal vai ocupar o espaço restante */
+main {
+    flex: 1; /* Esse comando vai "empurrar" o rodapé para baixo, ocupando o restante do espaço */
+}
+
+/* Estilos do rodapé */
+.rodape {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilos para os links no rodapé */
+.rodape a {
+    color: #fff; /* Cor branca para os links */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease; /* Transição suave para a mudança de cor */
+}
+
+/* Alterando a cor do link quando o cursor passa por cima */
+.rodape a:hover {
+    color: #1e802b; /* Cor de destaque quando o mouse passa por cima */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape div {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .direitos {
+        margin-top: 30px;
+    }
+}
